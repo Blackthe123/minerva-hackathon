@@ -3,7 +3,8 @@
 This prototype helps users memorize information from their own notes using AI and learning science.
 
 **Live Demo:** [https://blackthe123.github.io/minerva-hackathon/](url)
-*Paste the URL into searchbar if clicking does not work.
+
+Note: Paste the URL into searchbar if clicking does not work.
 
 ## Learning Science Integration
 

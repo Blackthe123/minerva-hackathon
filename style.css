@@ -1,0 +1,206 @@
+/* Basic Reset & Defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto; /* Center content */
+}
+
+header, footer {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+main {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* Input Section */
+#input-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#input-section button {
+    display: block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+#input-section button:hover {
+    background-color: #0056b3;
+}
+
+#input-section button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+
+#status-message {
+    margin-top: 15px;
+    font-weight: bold;
+    min-height: 1.2em; /* Prevent layout shift */
+}
+
+/* Review Section */
+#review-stats {
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#review-card {
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    min-height: 150px; /* Give it some initial height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#question-display {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    white-space: pre-wrap; /* Preserve line breaks in question */
+}
+
+#answer-display {
+    font-size: 1.1em;
+    background-color: #e9f5ff;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px dashed #b3d7ff;
+    margin-bottom: 15px;
+    white-space: pre-wrap; /* Preserve line breaks in answer */
+}
+
+#review-controls {
+    text-align: center; /* Center show answer button initially */
+}
+
+#show-answer-button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+#show-answer-button:hover {
+    background-color: #218838;
+}
+
+
+#difficulty-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around; /* Space out buttons */
+    gap: 10px; /* Add space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+#difficulty-buttons p {
+    width: 100%; /* Make paragraph take full width */
+    text-align: center;
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+.difficulty-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    transition: opacity 0.2s ease;
+    flex-grow: 1; /* Allow buttons to grow */
+    min-width: 70px; /* Ensure buttons have a minimum width */
+}
+
+.difficulty-btn:hover {
+    opacity: 0.85;
+}
+
+.difficulty-btn.again { background-color: #dc3545; }
+.difficulty-btn.hard { background-color: #ffc107; color: #333; }
+.difficulty-btn.good { background-color: #17a2b8; }
+.difficulty-btn.easy { background-color: #28a745; }
+
+
+#no-reviews-message {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* Utility Class */
+.hidden {
+    display: none !important; /* Use important to override potential conflicts */
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Basic Responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    main {
+        padding: 15px;
+    }
+    #difficulty-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+     .difficulty-btn {
+        width: 100%; /* Make buttons full width */
+    }
+}

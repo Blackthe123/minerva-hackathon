@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contextual Recall Helper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🧠 Contextual Recall Helper</h1>
+        <p>Paste text, generate recall prompts, and review with spaced repetition!</p>
+    </header>
+
+    <main>
+        <section id="input-section">
+            <h2>1. Add Your Study Material</h2>
+            <textarea id="text-input" rows="10" placeholder="Paste your notes, article text, or any study material here..."></textarea>
+            <button id="generate-button">Generate Recall Prompts</button>
+            <p id="status-message"></p>
+        </section>
+
+        <hr>
+
+        <section id="review-section">
+            <h2>2. Review Session</h2>
+            <div id="review-stats">
+                <p>Items due today: <span id="due-count">0</span></p>
+            </div>
+
+            <div id="review-card" class="hidden">
+                <div id="question-display">
+                    <!-- Question will be loaded here -->
+                </div>
+                <div id="answer-display" class="hidden">
+                    <!-- Answer will be loaded here -->
+                </div>
+                <div id="review-controls">
+                     <button id="show-answer-button">Show Answer</button>
+                     <div id="difficulty-buttons" class="hidden">
+                         <p>How well did you recall?</p>
+                         <button class="difficulty-btn again" onclick="rateDifficulty('again')">Again (1m)</button>
+                         <button class="difficulty-btn hard" onclick="rateDifficulty('hard')">Hard</button>
+                         <button class="difficulty-btn good" onclick="rateDifficulty('good')">Good</button>
+                         <button class="difficulty-btn easy" onclick="rateDifficulty('easy')">Easy</button>
+                     </div>
+                </div>
+            </div>
+            <p id="no-reviews-message">No items due for review right now. Generate some prompts!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Minerva Hackathon Project - Coding Challenge #1</p>
+    </footer>
+
+    <!-- IMPORTANT: type="module" is required for import statements -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
